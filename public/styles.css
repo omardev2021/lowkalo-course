@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "Alexandria";
+
+}
+
+.test {
+    color:red !important;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Alexandria', sans-serif;
+
+
+}
+.bg-scroll {
+    background-color: white !important; /* Change this color to your desired background color */
+}
+.scroll-btn {
+
+    width: 60px;
+    height: 60px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background-color: white;
+}
+
+.scroll-btn i {
+    color: #4215BA;
+    font-size: 24px;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-toggle {
+    display: none;
+}
+
+.accordion-title {
+    display: block;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+    padding: 1.25rem 1.5rem;
+}
+
+.accordion-toggle:checked + .accordion-title + .accordion-content {
+    display: block;
+}
