@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>لوكالو : دورة إدارة المخزون للمطاعم والكافيهات للمبتدئين</title>
+        <meta name="theme-color" content="#4215ba" />
+        <link rel="icon" href="{{asset('icon.png')}}" />
+
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -32,13 +35,13 @@
         </div>
     </nav>
 
-    <div class="flex flex-col md:flex-row p-5">
+    <div class="flex flex-col-reverse md:flex-row p-10">
 
 
 
         <div class="md:w-1/4 relative">
-<h1 class="text-4xl font-bold mt-[350px] leading-relaxed ">دورة إدارة المخزون<br /> للمطاعم والكافيهات<br /> للمبتدئين.</h1>
-            <a href="#scroll-target" class="scroll-btn mr-[250px] mt-20">
+<h1 class="text-4xl font-bold md:mt-[350px] leading-relaxed ">دورة إدارة المخزون<br /> للمطاعم والكافيهات<br /> للمبتدئين.</h1>
+            <a href="#scroll-target" class="scroll-btn mr-[250px] mt-20" onclick="smoothScroll(event)">
                 <i class="fas fa-arrow-down"></i>
             </a>
         </div>
@@ -50,32 +53,32 @@
     </div>
 
     <div class="p-5">
-        <h1 class="text-center text-4xl font-bold ">حضر الدورة موظفيين من الشركات الاتية</h1>
-        <div class="flex flex-row  justify-center item-center mt-10 p-10">
-            <div class="w-1/4">
-                <img src="{{asset('foodics-logo.svg')}}">
+        <h1 class="text-center text-2xl md:text-4xl font-bold ">حضر الدورة موظفيين من الشركات الاتية</h1>
+        <div class="flex flex-row justify-center items-center mt-10 p-10 space-x-5"> <!-- Added space-x class -->
+            <div class="w-1/4 flex justify-center">
+                <img width="150" src="{{asset('foodics-logo.svg')}}">
             </div>
-            <div class="w-1/4">
-                <img src="{{asset('foodics-logo.svg')}}">
+            <div class="w-1/4 flex justify-center ">
+                <img width="150"  src="{{asset('supy-logo.svg')}}">
             </div>
-            <div class="w-1/4">
-                <img src="{{asset('foodics-logo.svg')}}">
+            <div class="w-1/4 flex justify-center">
+                <img width="150" src="{{asset('bufflo-logo.png')}}">
             </div>
         </div>
     </div>
 
-    <div class="p-5 text-center bg-[#D9D9D9] mt-10">
+    <div class="p-5 text-center justify-center bg-[#D9D9D9] mt-10" id="scroll-target">
         <h1 class="text-center text-4xl font-bold">عن الدورة</h1>
-        <p class="p-10 text-lg mx-40">
+        <p class="p-10 text-lg max-w-2xl md:max-w-4xl text-center mx-auto">
             من أهم العناصر الموجودة في أي مطعم وتعد العصب الرئيسي لنجاح المطاعم والكافيهات هي معرفة تكاليف وحركة مواد المخزون للمنتجات. من خلال عملي على تطوير العديد من المطاعم والكافيهات ومقابلتي للعديد من رواد الاعمال في هذا المجال ، عملية إدارة المخزون لاتنال الاهتمام الكافي وخاصة عمليات الهدر الحاصلة في المطعم.
         </p>
 
     </div>
 
-    <div class="flex flex-row p-10">
+    <div class="flex flex-col md:flex-row p-10">
 
 
-        <div class="w-1/2 p-20">
+        <div class="w-1/2 w-full md:p-20">
         <h1 class="font-bold text-3xl text-[#113441] mb-10">لمن هذا الدورة</h1>
             <ul class="list-disc">
                 <li class="mb-3 text-lg">ملاك المطاعم والكافيهات، الصغيرة والمتوسطة الحجم.
@@ -95,12 +98,28 @@
             </ul>
         </div>
 
-        <div class="w-1/2">
-            <img src="{{asset('app.png')}}">
+        <div class="w-1/2 w-full md:p-10 ">
+            <img alt="course vector" src="{{asset('app.png')}}">
+        </div>
+    </div>
+    <div class="p-5">
+        <div class="flex flex-col md:flex-row justify-center items-center mt-10 p-10">
+            <div class="w-full md:w-1/4 flex flex-col items-center justify-center mb-5">
+                <img width="150" alt="video-icon" class="mb-3" src="{{asset('video-icon.png')}}">
+                <h2 class="text-center">فديوهات مسجلة</h2>
+            </div>
+            <div class="w-full md:w-1/4 flex flex-col items-center justify-center mb-5">
+                <img width="150" alt="levels-icon" class="mb-3" src="{{asset('levels-icon.png')}}">
+                <h2 class="text-center">كل المستويات</h2>
+            </div>
+            <div class="w-full md:w-1/4 flex flex-col items-center justify-center mb-5">
+                <img width="150" alt="cafe-icon" class="mb-3" src="{{asset('cafe-logo.png')}}">
+                <h2 class="text-center">قطاع الكافيهات والمطاعم</h2>
+            </div>
         </div>
     </div>
 
-    <div class="flex flex-row justify-center items-center gap-5 p-10 text-center bg-[#4215BA] mt-10">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-5 p-10 text-center bg-[#4215BA] mt-10">
         <h1 class="text-center text-4xl font-bold text-white">سجل الأن واستفيد من خصم التسجيل المبكر</h1>
         <div class="w-40 h-40 border border-full rounded-full bg-white">
             <h2 class="mt-10 text-lg text-[#4215BA] line-through font-bold">1299 ر.س</h2>
@@ -112,18 +131,15 @@
 
     </div>
 
-    <div class="flex flex-row p-10">
-
-        <div class="w-1/2">
+    <div class="flex flex-col md:flex-row p-10 ">
+        <div class="w-full mb-3 md:w-1/2 flex justify-center md:justify-start">
             <img src="{{asset('mohammed.jpeg')}}" width="500">
         </div>
-        <div class="w-1/2 p-20">
-            <h1 class="font-bold text-3xl text-[#113441] mb-3">مقدم الدورة</h1>
-            <h1 class=" text-xl text-[#113441] mb-3">محمد الشريف</h1>
+        <div class="w-full md:w-1/2 text-center md:text-right">
+            <h1 class="font-bold text-3xl text-[#113441] mb-3 ">مقدم الدورة</h1>
+            <h1 class="text-xl text-[#113441] mb-3">محمد الشريف</h1>
             <p>خبير في قطاع المطاعم والكافيهات وفي ادارة المخزون خبير في قطاع المطاعم والكافيهات وفي ادارة المخزون خبير في قطاع المطاعم والكافيهات وفي ادارة المخزون خبير في قطاع المطاعم والكافيهات وفي ادارة المخزون خبير في قطاع المطاعم والكافيهات وفي ادارة المخزون</p>
         </div>
-
-
     </div>
 
     <div class="flex justify-center items-center p-10 mt-10">
@@ -176,19 +192,22 @@
     </div>
 
 
-    <footer class="bg-white text-black py-6 text-center">
-   <p>كل الحقوق محفوظة ل لوكالو</p>
+    <footer class="bg-[#541BF1] text-black py-6 text-center">
+   <p class="text-white">كل الحقوق محفوظة © لوكالو</p>
     </footer>
-{{--    <script>--}}
-{{--        window.addEventListener('scroll', function() {--}}
-{{--            var navbar = document.getElementById('navbar');--}}
-{{--            if (window.scrollY > 0) {--}}
-{{--                navbar.classList.add('bg-scroll');--}}
-{{--            } else {--}}
-{{--                navbar.classList.remove('bg-scroll');--}}
-{{--            }--}}
-{{--        });--}}
-{{--    </script>--}}
+    <script>
+        function smoothScroll(event) {
+            event.preventDefault();
+            const targetId = event.currentTarget.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
     </body>
 
 
