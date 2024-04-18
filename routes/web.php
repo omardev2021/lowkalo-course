@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::post('/purchase',[HomeController::class,'purchase'])->name('purchase');
+
+Route::get('/payment-status',[HomeController::class,'payment_status'])->name('status');

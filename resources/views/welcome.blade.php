@@ -145,10 +145,17 @@
     <div class="flex justify-center items-center p-10 mt-10">
         <div class="max-w-2xl w-full bg-white rounded-lg shadow-md p-8">
             <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">سجل الآن واحصل على التخفيض</h1>
-            <form class="flex flex-col gap-4">
-                <input type="text" placeholder="الاسم" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" />
-                <input type="email" placeholder="البريد الإلكتروني" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" />
-                <input type="tel" placeholder="رقم الهاتف" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" />
+            <form class="flex flex-col gap-4" method="POST" action="{{route('purchase')}}">
+                @csrf
+                <input type="text" name="name" required placeholder="الاسم" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" />
+                <input type="email" name="email" required placeholder="البريد الإلكتروني" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" value="{{old('email')}}" />
+                @error('email')
+                <span class="font-bold text-xs text-red-500">البريد الالكتروني مسجل مسبقا</span>
+                @enderror
+                <input type="text" name="phone" required placeholder="رقم الهاتف" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 " value="{{old('phone')}}" />
+                   @error('phone')
+                <span class="font-bold text-xs text-red-500">رقم الجوال مسجل مسبقا</span>
+                @enderror
                 <button type="submit" class="w-full bg-[#4215BA] text-white py-2 rounded-md font-bold hover:bg-indigo-600 transition duration-300">تسجيل</button>
             </form>
         </div>
