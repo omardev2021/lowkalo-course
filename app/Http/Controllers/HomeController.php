@@ -6,7 +6,7 @@ use App\Models\Customer;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Redirect;
+
 
 use Mailjet\Resources;
 use Mailjet\Client;
@@ -74,7 +74,7 @@ class HomeController extends Controller
         $name = str_replace(' ', '', $user->name);
         $email = str_replace(' ', '', $user->email);
         $phone = str_replace(' ', '', $user->phone);
-$myurl = "http://127.0.0.1:8000/payment-status?name=$name&uremail=$email&urid=$user->id&phone=$phone";
+$myurl = "https://course.lowkalo.com/payment-status?name=$name&uremail=$email&urid=$user->id&phone=$phone";
         $fields = array(
             'trackid' => $idorder,
             'terminalId' => $terminalId,
@@ -126,7 +126,7 @@ $myurl = "http://127.0.0.1:8000/payment-status?name=$name&uremail=$email&urid=$u
 
 return redirect($url);
         } else {
-            dd('www');
+
             return redirect()->back();
             // print_r($result);
             // echo "<br/><br/>";
